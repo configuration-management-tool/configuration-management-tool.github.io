@@ -1,0 +1,4 @@
+baseURL = "https://configuration-management-tool.github.io/"
+locale = "en-us"
+title = "configuration-management-tool"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]

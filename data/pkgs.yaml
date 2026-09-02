@@ -1,0 +1,2 @@
+packages:
+  - { name: "cmt", chip: "C", desc: "Runs named shell commands, defined in an HCL2 manifest, against named groups of hosts in parallel — a from-scratch reimplementation of pressly/sup.", url: "https://github.com/configuration-management-tool/cmt", doc: "https://pkg.go.dev/github.com/configuration-management-tool/cmt" }

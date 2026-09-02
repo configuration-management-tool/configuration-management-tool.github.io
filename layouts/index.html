@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ .Site.Title }} — Run named commands, in parallel, across your hosts.</title>
+<meta name="description" content="cmt: a super-simple deployment tool. Named shell commands, defined in an HCL2 manifest, run against named groups of hosts in parallel.">
+<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+<link rel="stylesheet" href="{{ "css/brand.css" | relURL }}">
+<script src="{{ "js/theme.js" | relURL }}"></script>
+</head><body>
+<section class="hero">
+  <button id="themebtn" class="theme" type="button">Theme: System</button>
+  <img src="{{ "img/configuration-management-tool-white.png" | relURL }}" alt="configuration-management-tool">
+  <h1>configuration-management-tool</h1>
+  <p>Run named commands, in parallel, across named groups of hosts.</p>
+  <div class="btns">
+    <a class="btn btn-solid" href="https://pkg.go.dev/github.com/configuration-management-tool/cmt">Reference</a>
+    <a class="btn btn-ghost" href="https://github.com/configuration-management-tool">GitHub</a>
+  </div>
+</section>
+<div class="wrap">
+  <div class="panel">
+    <h2>What is configuration-management-tool?</h2>
+    <p>A deploy needs the same handful of moves every time: pick a group of hosts, run a sequence of commands against them, upload a few files, become somebody else first if you have to. <code>cmt</code> is that, on its own, without dragging in a full configuration-management system to do a job that doesn't need one — a from-scratch, pure-Go reimplementation of the idea behind pressly/sup, with an HCL2 manifest and connections handled by go-remoteexec/transport (local, SSH, WinRM, sudo/su/doas).</p>
+  </div>
+  <h2 class="section">Packages</h2>
+  <p class="sub">{{ len hugo.Data.pkgs.packages }} module(s) in this organisation.</p>
+  <div class="grid">
+    {{ range hugo.Data.pkgs.packages }}
+    <div class="card">
+      <div class="chip">{{ .chip }}</div>
+      <div class="nm">{{ .name }}</div>
+      <div class="ds">{{ .desc }}</div>
+      <div class="lk"><a href="{{ .url }}">GitHub</a> · <a href="{{ .doc }}">pkg.go.dev</a></div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+<footer>Built with Hugo · Pure Go, CGO=0 · Branding from <a href="https://github.com/configuration-management-tool/brand">configuration-management-tool/brand</a></footer>
+</body></html>
